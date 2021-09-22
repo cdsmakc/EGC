@@ -1,0 +1,52 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\egc_lab_v100r001.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    (NoModify))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (TestPoint1R0
+      (FullPartName "TestPoint1R0.Normal")
+      (LibraryName "Y:\CADENCECENLIB\SYMBOL\MCH_MISC.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "NingJianLi")
+  (ISPCBBASICLICENSE "false")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\egc_lab_v100r001.dsn")
+      (Path "Design Resources" ".\egc_lab_v100r001.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\egc_lab_v100r001.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 393"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1672 52 484")
+        (Scroll "312 1331")
+        (Zoom "336")
+        (Occurrence "/"))
+      (Path "I:\PROJECT\25_EGC\01_PCB\02_LAB\01_SCH\EGC_LAB_V100R001.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "05_Funk1"))))
