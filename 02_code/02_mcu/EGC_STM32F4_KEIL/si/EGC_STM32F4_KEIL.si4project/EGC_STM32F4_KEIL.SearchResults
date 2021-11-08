@@ -1,0 +1,6 @@
+---- uiConfigUpdateByHost Matches (5 in 3 files) ----
+EGC_CTL_Task in EGC_CTL.c (user) :          if(1 == g_stHSTWA.uiConfigUpdateByHost)
+EGC_CTL_Task in EGC_CTL.c (user) :             g_stHSTWA.uiConfigUpdateByHost = 0 ;
+__EGC_HST_Init in EGC_HST.c (user) :     g_stHSTWA.uiConfigUpdateByHost = 0 ;
+__EGC_HST_PRM_WriteConfigInfo in EGC_HST.c (user) :         g_stHSTWA.uiConfigUpdateByHost = 1 ;
+tagEGC_HST_WORKAREA::{anon_struct} in EGC_HST.h (user) :             UINT                       uiConfigUpdateByHost  : 1 ;  /* 配置信息被上位机修改。内部模块置位，外部模块清除 */

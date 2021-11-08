@@ -1,0 +1,371 @@
+/*******************************************************************************
+ Copyright SAKC Corporation. 2016. All rights reserved.
+--------------------------------------------------------------------------------
+    File name    : EGC_Boards.h
+    Project name : Emulation Glow Clock
+    Module name  : 
+    Date created : 2021年8月30日   15时1分7秒
+    Author       : Ning.JianLi
+    Description  : 本文件包含项目使用的所有STM32的GPIO定义，以及外设定义。
+*******************************************************************************/
+
+#ifndef __EGC_BOARDS_H__
+#define __EGC_BOARDS_H__
+
+#ifdef __cplusplus
+extern "c" {
+#endif /* __cplusplus */
+
+#include "pub_lib.h"
+
+#include "stm32f4xx.h"
+
+CODE_SECTION("==========================")
+CODE_SECTION("== GPIO 重定义          ==")
+CODE_SECTION("==========================")
+
+/* GPIO组别定义 */
+#define EGC_BOARDS_GPIO_GROUP_A                (0x10)
+#define EGC_BOARDS_GPIO_GROUP_B                (0x20)
+#define EGC_BOARDS_GPIO_GROUP_C                (0x30)
+#define EGC_BOARDS_GPIO_GROUP_D                (0x40)
+#define EGC_BOARDS_GPIO_GROUP_E                (0x50)
+#define EGC_BOARDS_GPIO_GROUP_F                (0x60)
+#define EGC_BOARDS_GPIO_GROUP_G                (0x70)
+#define EGC_BOARDS_GPIO_GROUP_H                (0x80)
+#define EGC_BOARDS_GPIO_GROUP_I                (0x90)
+#define EGC_BOARDS_GPIO_GROUP_J                (0xA0)
+#define EGC_BOARDS_GPIO_GROUP_K                (0xB0)
+#define EGC_BOARDS_GPIO_GROUP_MASK             (0xF0)
+
+/* GPIO组内位定义 */
+#define EGC_BOARDS_GPIO_BIT_0                  (0x00)
+#define EGC_BOARDS_GPIO_BIT_1                  (0x01)
+#define EGC_BOARDS_GPIO_BIT_2                  (0x02)
+#define EGC_BOARDS_GPIO_BIT_3                  (0x03)
+#define EGC_BOARDS_GPIO_BIT_4                  (0x04)
+#define EGC_BOARDS_GPIO_BIT_5                  (0x05)
+#define EGC_BOARDS_GPIO_BIT_6                  (0x06)
+#define EGC_BOARDS_GPIO_BIT_7                  (0x07)
+#define EGC_BOARDS_GPIO_BIT_8                  (0x08)
+#define EGC_BOARDS_GPIO_BIT_9                  (0x09)
+#define EGC_BOARDS_GPIO_BIT_10                 (0x0A)
+#define EGC_BOARDS_GPIO_BIT_11                 (0x0B)
+#define EGC_BOARDS_GPIO_BIT_12                 (0x0C)
+#define EGC_BOARDS_GPIO_BIT_13                 (0x0D)
+#define EGC_BOARDS_GPIO_BIT_14                 (0x0E)
+#define EGC_BOARDS_GPIO_BIT_15                 (0x0F)
+#define EGC_BOARDS_GPIO_BIT_MASK               (0x0F)
+
+/* 所有GPIO定义 */
+#define EGC_BOARDS_GPIO_PA0                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PA1                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PA2                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PA3                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PA4                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PA5                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PA6                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PA7                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PA8                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PA9                    (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PA10                   (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PA11                   (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PA12                   (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PA13                   (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PA14                   (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PA15                   (EGC_BOARDS_GPIO_GROUP_A | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PB0                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PB1                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PB2                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PB3                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PB4                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PB5                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PB6                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PB7                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PB8                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PB9                    (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PB10                   (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PB11                   (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PB12                   (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PB13                   (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PB14                   (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PB15                   (EGC_BOARDS_GPIO_GROUP_B | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PC0                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PC1                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PC2                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PC3                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PC4                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PC5                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PC6                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PC7                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PC8                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PC9                    (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PC10                   (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PC11                   (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PC12                   (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PC13                   (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PC14                   (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PC15                   (EGC_BOARDS_GPIO_GROUP_C | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PD0                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PD1                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PD2                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PD3                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PD4                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PD5                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PD6                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PD7                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PD8                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PD9                    (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PD10                   (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PD11                   (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PD12                   (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PD13                   (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PD14                   (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PD15                   (EGC_BOARDS_GPIO_GROUP_D | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PE0                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PE1                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PE2                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PE3                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PE4                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PE5                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PE6                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PE7                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PE8                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PE9                    (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PE10                   (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PE11                   (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PE12                   (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PE13                   (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PE14                   (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PE15                   (EGC_BOARDS_GPIO_GROUP_E | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PF0                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PF1                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PF2                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PF3                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PF4                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PF5                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PF6                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PF7                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PF8                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PF9                    (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PF10                   (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PF11                   (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PF12                   (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PF13                   (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PF14                   (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PF15                   (EGC_BOARDS_GPIO_GROUP_F | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PG0                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PG1                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PG2                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PG3                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PG4                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PG5                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PG6                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PG7                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PG8                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PG9                    (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PG10                   (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PG11                   (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PG12                   (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PG13                   (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PG14                   (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PG15                   (EGC_BOARDS_GPIO_GROUP_G | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PH0                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PH1                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PH2                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PH3                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PH4                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PH5                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PH6                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PH7                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PH8                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PH9                    (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PH10                   (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PH11                   (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PH12                   (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PH13                   (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PH14                   (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PH15                   (EGC_BOARDS_GPIO_GROUP_H | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PI0                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PI1                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PI2                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PI3                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PI4                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PI5                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PI6                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PI7                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PI8                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PI9                    (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PI10                   (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PI11                   (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PI12                   (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PI13                   (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PI14                   (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PI15                   (EGC_BOARDS_GPIO_GROUP_I | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PJ0                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PJ1                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PJ2                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PJ3                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PJ4                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PJ5                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PJ6                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PJ7                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PJ8                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PJ9                    (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PJ10                   (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PJ11                   (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PJ12                   (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PJ13                   (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PJ14                   (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PJ15                   (EGC_BOARDS_GPIO_GROUP_J | EGC_BOARDS_GPIO_BIT_15)
+
+#define EGC_BOARDS_GPIO_PK0                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_0)
+#define EGC_BOARDS_GPIO_PK1                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_1)
+#define EGC_BOARDS_GPIO_PK2                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_2)
+#define EGC_BOARDS_GPIO_PK3                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_3)
+#define EGC_BOARDS_GPIO_PK4                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_4)
+#define EGC_BOARDS_GPIO_PK5                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_5)
+#define EGC_BOARDS_GPIO_PK6                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_6)
+#define EGC_BOARDS_GPIO_PK7                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_7)
+#define EGC_BOARDS_GPIO_PK8                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_8)
+#define EGC_BOARDS_GPIO_PK9                    (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_9)
+#define EGC_BOARDS_GPIO_PK10                   (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_10)
+#define EGC_BOARDS_GPIO_PK11                   (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_11)
+#define EGC_BOARDS_GPIO_PK12                   (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_12)
+#define EGC_BOARDS_GPIO_PK13                   (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_13)
+#define EGC_BOARDS_GPIO_PK14                   (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_14)
+#define EGC_BOARDS_GPIO_PK15                   (EGC_BOARDS_GPIO_GROUP_K | EGC_BOARDS_GPIO_BIT_15)
+
+
+CODE_SECTION("==========================") ;
+CODE_SECTION("==  板上GPIO定义        ==") ;
+CODE_SECTION("==========================") ;
+
+/* LCD相关GPIO定义 */
+#define EGC_LCD_BRIGHTNESS_ADJ                            (EGC_BOARDS_GPIO_PA1)
+
+#define EGC_LCD_GROUP1_GPIO_DCN                           (EGC_BOARDS_GPIO_PJ14)
+#define EGC_LCD_GROUP1_GPIO_RESETN                        (EGC_BOARDS_GPIO_PK3)
+#define EGC_LCD_GROUP1_GPIO_SPI_CS1N                      (EGC_BOARDS_GPIO_PC13)
+#define EGC_LCD_GROUP1_GPIO_SPI_CS2N                      (EGC_BOARDS_GPIO_PI12)
+#define EGC_LCD_GROUP1_GPIO_SPI_CS3N                      (EGC_BOARDS_GPIO_PI14)
+#define EGC_LCD_GROUP1_GPIO_SPI_CS4N                      (EGC_BOARDS_GPIO_PK5)
+#define EGC_LCD_GROUP1_GPIO_SPI_NSS_NC                    (EGC_BOARDS_GPIO_PE4)
+#define EGC_LCD_GROUP1_GPIO_SPI_SCK                       (EGC_BOARDS_GPIO_PE2)
+#define EGC_LCD_GROUP1_GPIO_SPI_MISO_NC                   (EGC_BOARDS_GPIO_PE5)
+#define EGC_LCD_GROUP1_GPIO_SPI_MOSI                      (EGC_BOARDS_GPIO_PE6)
+
+#define EGC_LCD_GROUP2_GPIO_DCN                           (EGC_BOARDS_GPIO_PJ9)
+#define EGC_LCD_GROUP2_GPIO_RESETN                        (EGC_BOARDS_GPIO_PJ7)
+#define EGC_LCD_GROUP2_GPIO_SPI_CS5N                      (EGC_BOARDS_GPIO_PJ5)
+#define EGC_LCD_GROUP2_GPIO_SPI_CS6N                      (EGC_BOARDS_GPIO_PJ3)
+#define EGC_LCD_GROUP2_GPIO_SPI_CS7N                      (EGC_BOARDS_GPIO_PJ1)
+#define EGC_LCD_GROUP2_GPIO_SPI_CS8N                      (EGC_BOARDS_GPIO_PI15)
+#define EGC_LCD_GROUP2_GPIO_SPI_NSS_NC                    (EGC_BOARDS_GPIO_PF6)
+#define EGC_LCD_GROUP2_GPIO_SPI_SCK                       (EGC_BOARDS_GPIO_PF7)
+#define EGC_LCD_GROUP2_GPIO_SPI_MISO_NC                   (EGC_BOARDS_GPIO_PF8)
+#define EGC_LCD_GROUP2_GPIO_SPI_MOSI                      (EGC_BOARDS_GPIO_PF9)
+
+/* W25Q GPIO相关定义 */
+#define EGC_BOARDS_GPIO_W25Q_NSS                          (EGC_BOARDS_GPIO_PE3)
+#define EGC_BOARDS_GPIO_W25Q_SCK                          (EGC_BOARDS_GPIO_PG13)
+#define EGC_BOARDS_GPIO_W25Q_MOSI                         (EGC_BOARDS_GPIO_PG14)
+#define EGC_BOARDS_GPIO_W25Q_MISO                         (EGC_BOARDS_GPIO_PG12)
+
+/* I2C GPIO定义 */
+#define EGC_BOARDS_I2C_GPIO_SCL                           (EGC_BOARDS_GPIO_PB6)
+#define EGC_BOARDS_I2C_GPIO_SDA                           (EGC_BOARDS_GPIO_PB7)
+
+/* MSA300 GPIO定义 */
+#define EGC_BOARDS_MSA300_GPIO_INT                        (EGC_BOARDS_GPIO_PK0)
+
+/* ESP32 GPIO定义 */
+#define EGC_BOARDS_ESP32_GPIO_UART_TX                     (EGC_BOARDS_GPIO_PB10)
+#define EGC_BOARDS_ESP32_GPIO_UART_RX                     (EGC_BOARDS_GPIO_PB11)
+#define EGC_BOARDS_ESP32_GPIO_RST                         (EGC_BOARDS_GPIO_PI11)
+
+/* Host GPIO定义 */
+#define EGC_BOARDS_GPIO_HOST_UART_TX                      (EGC_BOARDS_GPIO_PA9)
+#define EGC_BOARDS_GPIO_HOST_UART_RX                      (EGC_BOARDS_GPIO_PA10)
+
+CODE_SECTION("==========================") ;
+CODE_SECTION("== 外设定义             ==") ;
+CODE_SECTION("==========================") ;
+/* SPI --> LCD Group1 SPI */
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1                  (SPI4)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_AF_DEF           (GPIO_AF_SPI4)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_INTN             (SPI4_IRQn)
+
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_DMA_TX_STREAM    (DMA2_Stream1)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_DMA_RX_STREAM    (DMA2_Stream0)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_DMA_TX_CHANNEL   (DMA_Channel_4)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_DMA_RX_CHANNEL   (DMA_Channel_4)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_DMA_TX_IRQ_NUM   (DMA2_Stream1_IRQn)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP1_DMA_RX_IRQ_NUM   (DMA2_Stream0_IRQn)
+
+/* SPI --> LCD Group2 SPI */
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2                  (SPI5)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_AF_DEF           (GPIO_AF_SPI5)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_INTN             (SPI5_IRQn)
+
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_DMA_TX_STREAM    (DMA2_Stream4)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_DMA_RX_STREAM    (DMA2_Stream3)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_DMA_TX_CHANNEL   (DMA_Channel_2)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_DMA_RX_CHANNEL   (DMA_Channel_2)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_DMA_TX_IRQ_NUM   (DMA2_Stream4_IRQn)
+#define EGC_BOARDS_PERIPH_SPI_LCD_GROUP2_DMA_RX_IRQ_NUM   (DMA2_Stream3_IRQn)
+
+/* SPI --> W25Q SPI */
+#define EGC_BOARDS_PERIPH_SPI_W25Q                        (SPI6)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_AF_DEF                 (GPIO_AF_SPI6)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_INTN                   (SPI6_IRQn)
+
+#define EGC_BOARDS_PERIPH_SPI_W25Q_DMA_TX_STREAM          (DMA2_Stream5)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_DMA_RX_STREAM          (DMA2_Stream6)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_DMA_TX_CHANNEL         (DMA_Channel_1)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_DMA_RX_CHANNEL         (DMA_Channel_1)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_DMA_TX_IRQ_NUM         (DMA2_Stream5_IRQn)
+#define EGC_BOARDS_PERIPH_SPI_W25Q_DMA_RX_IRQ_NUM         (DMA2_Stream6_IRQn)
+
+/* 定时器--调光定时器 */
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM                     (TIM2)
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM_GPIO_AF_DEF         (GPIO_AF_TIM2)
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM_CHANNEL             (TIM_Channel_2)
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM_INTN                (TIM2_IRQn)
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM_FREQUENCY           (10000u)          /* PWM波频率 */
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM_COUNTER_NUM         (1000u)           /* PWM波每周期内计数次数 */
+#define EGC_BOARDS_PERIPH_TIM_LCD_PWM_OC_MODE             (TIM_OCMode_PWM1)
+
+/* I2C */
+#define EGC_BOARDS_PERIPH_I2C                             (I2C1)
+#define EGC_BOARDS_PERIPH_I2C_GPIO_AF_DEF                 (GPIO_AF_I2C1)
+#define EGC_BOARDS_PERIPH_I2C_SPEED                       (50000u)
+
+/* EXTI */
+#define EGC_BOARDS_PERIPH_EXTI_MSA300_EXTI_LINE           (EXTI_Line0)
+
+/* UART */
+#define EGC_BOARDS_PERIPH_UART_ESP32                      (USART3)
+#define EGC_BOARDS_PERIPH_UART_GPIO_AF_DEF                (GPIO_AF_USART3)
+#define EGC_BOARDS_PERIPH_UART_BAUDRATE                   (115200)
+
+#define EGC_BOARDS_PERIPH_UART_HOST                       (USART1)
+#define EGC_BOARDS_PERIPH_UART_HOST_GPIO_AF_DEF           (GPIO_AF_USART1)
+#define EGC_BOARDS_PERIPH_UART_HOST_BAUDRATE              (115200)
+
+#ifdef __cplusplus
+}
+#endif /* __cplusplus */
+#endif /* __EGC_BOARDS_H__ */
+
+/******* End of file EGC_Boards.h. *******/  
+
