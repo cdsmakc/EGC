@@ -1,0 +1,17 @@
+﻿生成启动时间为 2021/10/26 17:31:20。
+     1>项目“E:\Clock_V4_IV18_V2\04_code\01_Host\FireFly\FireFly\FireFly.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\FireFly.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FireFlyDlg.cpp
+         FireFlyDlg.cpp
+       Link:
+         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Clock_V4_IV18_V2\04_code\01_Host\FireFly\Debug\FireFly.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"E:\Clock_V4_IV18_V2\04_code\01_Host\FireFly\Debug\FireFly.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Clock_V4_IV18_V2\04_code\01_Host\FireFly\Debug\FireFly.lib" /MACHINE:X86 Debug\FireFly.res
+         Debug\FireFly.obj
+         Debug\FireFlyComm.obj
+         Debug\FireFlyDlg.obj
+         Debug\stdafx.obj
+         FireFly.vcxproj -> E:\Clock_V4_IV18_V2\04_code\01_Host\FireFly\Debug\FireFly.exe
+     1>已完成生成项目“E:\Clock_V4_IV18_V2\04_code\01_Host\FireFly\FireFly\FireFly.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.30
